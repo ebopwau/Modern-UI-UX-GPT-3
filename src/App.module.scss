@@ -1,20 +1,67 @@
-.example {
-  display: grid;
-  transition: all .5s;
-  user-select: none;
-  background: linear-gradient(to bottom, blue, white);
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
 
-  & h1 {
-    animation: fade-in 2s ease;
+body {
+  background: var(--color-bg);
+}
+
+a {
+  color: unset;
+  text-decoration: none;
+}
+
+.app {
+
+}
+
+.gradient {
+  &__bg {
+    color: #81AFDD;
+    background: radial-gradient(circle at 3% 25%, rgba(0, 40, 83, 1) 0%, rgba(4, 12, 24, 1) 100%);
+  }
+
+  &__text {
+    background: var(--gradient-text);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 }
 
-@keyframes fade-in {
-  from {
-    opacity: 0;
+.section {
+  &__padding {
+    padding: 4rem 6rem;
   }
 
-  to {
-    opacity: 1;
+  &__margin {
+    margin: 4rem 6rem;
   }
 }
+
+@media screen and (max-width: 700px) {
+  .section {
+    &__padding {
+      padding: 4rem;
+    }
+
+    &__margin {
+      margin: 4rem;
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .section {
+    &__padding {
+      padding: 4rem 2rem;
+    }
+
+    &__margin {
+      margin: 4rem 2rem;
+    }
+  }
+}
+
+
+
